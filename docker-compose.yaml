@@ -36,7 +36,6 @@ services:
     image: mysql:8.4
     volumes:
       - ./db-data:/var/lib/mysql
-      - ./db-data:/etc/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=$SERVICE_PASSWORD_ROOT
       - MYSQL_DATABASE=wordpress
