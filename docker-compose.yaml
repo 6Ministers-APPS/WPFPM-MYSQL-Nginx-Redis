@@ -8,10 +8,10 @@ services:
     image: wordpress:php8.2-fpm
     volumes:
       - ./wordpress-files:/var/www/html
-      - ./php/wp-php.ini:/usr/local/etc/php/conf.d/wp-php.ini
+      - ./php:/usr/local/etc/php/conf.d/wp-php.ini
     environment:
       - SERVICE_FQDN_WORDPRESS
-      - WORDPRESS_DB_HOST=mariadb
+      - WORDPRESS_DB_HOST=db
       - WORDPRESS_DB_USER=$SERVICE_USER_WORDPRESS
       - WORDPRESS_DB_PASSWORD=$SERVICE_PASSWORD_WORDPRESS
       - WORDPRESS_DB_NAME=wordpress
